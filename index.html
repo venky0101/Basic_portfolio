@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="./Assets/DADALA_venkatesh_prasad-removebg-preview.png" class="logo"  alt="">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Fornt end Developer</p>
+                <h1>Hi, I'm <span>Dadala</span> Venkatesh <br>Prasad From India</h1>
+            </div>
+        </div>
+        <!-- About------------------------------------------------------ -->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about_colo-1">
+                        <img src="./Assets/My_pics/Style.jpg"  class="Sup" alt="">
+                    </div>
+                    <div class="about_colo-2">
+                        <h1 class="subtitle">About Me</h1>
+                        <p>
+                            As a quick learner with a strong foundation in academic knowledge and hands-on internship experience, I am eager to contribute to innovative software development projects in an entry-level role. I aim to enhance my technical skills while collaborating with talented teams to solve real-world challenges. My goal is to secure a position in a dynamic company where I can apply my skills and experience to drive the organization’s growth and success.
+                        </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Fornt-end Developer</span><br>Designing the fornt-end pages </li>
+                                <li><span>Machine learning and AI </span><br>Developing the models </li>
+                                <li><span>Game designer</span><br>Developing the games in Unity and Unreal engine</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2024</span><br>Python FullStack training at PySpiders</li>
+                                <li><span>2024</span><br>Rvr & Jc college of engineering- Btech Computer Science and engineering</li>
+                                <li><span>2020</span><br>Training for the competitive exams for engineering colleges.</li>
+                                <li><span>2019</span><br>Sri chaitanya Junior College - Intermediate 2 years.</li>
+                                <li><span>2017</span><br>Sri chaitanya Techno School - 10th class.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2022</span><br>Indian servers-Machine Learning Basics as a Intern.</li>
+                                <li><span>2023</span><br>Spypro-Security Solution - Cybersecurity basics as a intern.</li>
+                                <li><span>2024</span><br>DRDO - (NSTL) - Joined as a research intern to know anout the techniques used to automate the missiles by using deep learning models and experiment on the models.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ----------------------------------------Services------------------------------------------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle"> My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Forntend Developer</h2>
+                    <p>Designing the web forntend page with is user-interactive and attractive for the user to uasage of the webpage using new techonology.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h2>Machine Learning / AI</h2>
+                    <p>Designing the Models and deploying them for better accuracy and checking the efficent manner of the model and accuracy.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-cube"></i>
+                    <h2>Game designer</h2>
+                    <p>Designing the Games by using unreal engine and unity single player games and story mode games.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------------Portfolio-------------------- -->
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
